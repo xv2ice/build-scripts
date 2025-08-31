@@ -1,12 +1,7 @@
 repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
-git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_manifests
+git clone -b lineage-23.0 https://github.com/Parbindar7/local_manifest_exynos9611.git .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
 /opt/crave/resync.sh
 repo sync
-git clone https://github.com/Exynos9611Development/android_device_samsung_a51 device/samsung/a51
-git clone https://github.com/Exynos9611Development/android_vendor_samsung_a51 vendor/samsung/a51
-git clone https://github.com/Exynos9611Development/android_kernel_samsung_universal9611 kernel/samsung/universal9611
-git clone https://github.com/Exynos9611Development/android_vendor_samsung_universal9611-common vendor/samsung/universal9611-common
-git clone https://github.com/Exynos9611Development/android_device_samsung_universal9611-common device/samsung/universal9611-common
 source build/envsetup.sh
-lunch lineage_a51-bp1a-userdebug && mka derp
+lunch lineage_a51-bp2a-userdebug && mka derp
